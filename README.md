@@ -192,7 +192,7 @@ I graduated from **NIT Tiruchirappalli** — one of India's premier engineering 
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   &nbsp;
-  <a href="https://abhiramrathod.github.io">
+  <a href="https://portfolio-fc6cd2.gitlab.io/">
     <img src="https://img.shields.io/badge/Portfolio-blueviolet?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
