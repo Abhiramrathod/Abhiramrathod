@@ -5,7 +5,7 @@
 
 <!-- HEADER CAPSULE WITH NAME -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:000000,40:003300,70:00ff41,100:000000&height=160&section=header&text=Abhiram%20Rathod&fontSize=52&fontColor=00ff41&fontAlignY=55&desc=%3C%20Software%20Developer%20%40%20Amdocs%20%7C%20NIT%20Trichy%20%2724%20%7C%20Pune%2C%20India%20%2F%3E&descAlignY=75&descSize=15&animation=blinking&stroke=00ff41&strokeWidth=1" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff41&height=200&section=header&text=Abhiram%20Rathod&fontSize=52&fontColor=00ff41&fontAlignY=40&desc=Software%20Developer%20%40%20Amdocs%20%7C%20NIT%20Trichy%2024%20%7C%20Pune%2C%20India&descAlignY=60&descSize=16&animation=fadeIn" width="100%"/>
 </p>
 
 <!-- TYPING SVG HACKER STYLE -->
