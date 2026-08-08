@@ -1,0 +1,93 @@
+<svg width="980" height="250" viewBox="0 0 980 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated GitHub stats telemetry</title>
+  <desc id="desc">Animated neon GitHub statistics panel with moving chart lines, contribution tiles, and live counters.</desc>
+  <style>
+    .line-a { stroke-dasharray: 620; stroke-dashoffset: 620; animation: draw 4.8s ease-in-out infinite; }
+    .line-b { stroke-dasharray: 520; stroke-dashoffset: 520; animation: draw 5.6s ease-in-out infinite .5s; }
+    .scan { animation: scan 4.2s linear infinite; }
+    .pulse { animation: pulse 2.6s ease-in-out infinite; }
+    .pulse2 { animation: pulse 3.1s ease-in-out infinite .35s; }
+    .tile { animation: tile 3.4s ease-in-out infinite; }
+    .tile:nth-of-type(2n) { animation-delay: .25s; }
+    .tile:nth-of-type(3n) { animation-delay: .55s; }
+    .tile:nth-of-type(5n) { animation-delay: .9s; }
+    .bar1 { animation: bar 2.4s ease-in-out infinite; transform-origin: bottom; transform-box: fill-box; }
+    .bar2 { animation: bar 2.9s ease-in-out infinite .3s; transform-origin: bottom; transform-box: fill-box; }
+    .bar3 { animation: bar 2.1s ease-in-out infinite .55s; transform-origin: bottom; transform-box: fill-box; }
+    .bar4 { animation: bar 3.2s ease-in-out infinite .1s; transform-origin: bottom; transform-box: fill-box; }
+    @keyframes draw { 0% { stroke-dashoffset: 620; opacity: .35; } 45%,65% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: -620; opacity: .35; } }
+    @keyframes scan { from { transform: translateX(-220px); } to { transform: translateX(1000px); } }
+    @keyframes pulse { 0%,100% { opacity: .45; transform: scale(.96); } 50% { opacity: 1; transform: scale(1); } }
+    @keyframes tile { 0%,100% { opacity: .22; } 50% { opacity: 1; } }
+    @keyframes bar { 0%,100% { transform: scaleY(.38); opacity: .6; } 50% { transform: scaleY(1); opacity: 1; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="980" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05070a"/>
+      <stop offset=".48" stop-color="#071014"/>
+      <stop offset="1" stop-color="#191507"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8df8ff"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffe39b"/>
+      <stop offset="1" stop-color="#ffb000"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" stroke="#12343d" stroke-width="1" opacity=".45"/>
+    </pattern>
+  </defs>
+
+  <rect width="980" height="250" rx="20" fill="url(#bg)"/>
+  <rect width="980" height="250" rx="20" fill="url(#grid)" opacity=".75"/>
+  <rect class="scan" x="0" y="0" width="170" height="250" fill="#00d4ff" opacity=".06"/>
+
+  <text x="54" y="48" fill="#ffffff" font-family="JetBrains Mono, Consolas, monospace" font-size="22" font-weight="800">REAL-TIME GITHUB TELEMETRY</text>
+  <text x="54" y="76" fill="#00d4ff" font-family="JetBrains Mono, Consolas, monospace" font-size="14" font-weight="700">animated overlay for stats, streaks, languages, and contribution flow</text>
+
+  <g transform="translate(54 105)">
+    <rect width="198" height="92" rx="14" fill="#071014" stroke="#00d4ff" stroke-width="1.4"/>
+    <text x="20" y="30" fill="#00d4ff" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700">COMMITS</text>
+    <text x="20" y="62" fill="#ffffff" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800">ACTIVE</text>
+    <circle class="pulse" cx="166" cy="46" r="16" fill="#00d4ff" opacity=".85"/>
+  </g>
+
+  <g transform="translate(274 105)">
+    <rect width="198" height="92" rx="14" fill="#071014" stroke="#ffb000" stroke-width="1.4"/>
+    <text x="20" y="30" fill="#ffb000" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700">STREAK</text>
+    <text x="20" y="62" fill="#ffffff" font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="800">ONLINE</text>
+    <circle class="pulse2" cx="166" cy="46" r="16" fill="#ffb000" opacity=".85"/>
+  </g>
+
+  <g transform="translate(508 65)">
+    <path class="line-a" d="M0 122C42 88 76 92 112 103C158 118 181 41 231 52C276 62 286 105 334 82C373 63 390 25 430 31" stroke="url(#cyan)" stroke-width="4" stroke-linecap="round"/>
+    <path class="line-b" d="M0 154C45 140 75 133 113 145C157 159 186 112 230 119C278 127 299 164 337 143C374 123 394 111 430 116" stroke="url(#amber)" stroke-width="4" stroke-linecap="round"/>
+    <g transform="translate(0 0)">
+      <rect class="bar1" x="18" y="66" width="14" height="92" rx="4" fill="#00d4ff"/>
+      <rect class="bar2" x="52" y="36" width="14" height="122" rx="4" fill="#ffb000"/>
+      <rect class="bar3" x="86" y="88" width="14" height="70" rx="4" fill="#7cff6b"/>
+      <rect class="bar4" x="120" y="58" width="14" height="100" rx="4" fill="#00d4ff"/>
+    </g>
+  </g>
+
+  <g transform="translate(610 166)">
+    <rect class="tile" x="0" y="0" width="15" height="15" rx="3" fill="#00d4ff"/>
+    <rect class="tile" x="22" y="0" width="15" height="15" rx="3" fill="#ffb000"/>
+    <rect class="tile" x="44" y="0" width="15" height="15" rx="3" fill="#7cff6b"/>
+    <rect class="tile" x="66" y="0" width="15" height="15" rx="3" fill="#00d4ff"/>
+    <rect class="tile" x="88" y="0" width="15" height="15" rx="3" fill="#ff4d6d"/>
+    <rect class="tile" x="110" y="0" width="15" height="15" rx="3" fill="#00d4ff"/>
+    <rect class="tile" x="132" y="0" width="15" height="15" rx="3" fill="#ffb000"/>
+    <rect class="tile" x="154" y="0" width="15" height="15" rx="3" fill="#7cff6b"/>
+    <rect class="tile" x="176" y="0" width="15" height="15" rx="3" fill="#00d4ff"/>
+    <rect class="tile" x="198" y="0" width="15" height="15" rx="3" fill="#ffb000"/>
+    <rect class="tile" x="220" y="0" width="15" height="15" rx="3" fill="#00d4ff"/>
+    <rect class="tile" x="242" y="0" width="15" height="15" rx="3" fill="#7cff6b"/>
+  </g>
+
+  <text x="54" y="224" fill="#ffffff" fill-opacity=".75" font-family="JetBrains Mono, Consolas, monospace" font-size="13">
+    Live data cards render below. This animated layer keeps the control room moving.
+  </text>
+</svg>
